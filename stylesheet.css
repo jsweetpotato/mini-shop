@@ -40,12 +40,13 @@ nav {
     text-align: center;
 }
 
-button {
+.btn {
     all: unset;
     margin: 10px 20px 10px 20px;
     width: 100px;
     height: 48px;
     cursor: pointer;
+    text-align: center;
     font-size: 18px;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
@@ -58,7 +59,7 @@ button {
     box-sizing: border-box;
 }
 
-button:active {
+button:active, .reset_btn:active {
     box-shadow: unset;
     border: 1px solid #d6d9e017;
     box-shadow: inset 4px 4px 9px #203a5031, inset -4px -4px 8px #fff;
@@ -79,20 +80,26 @@ button:active {
     color: #fd97a8;
 }
 
+.reset_btn:active{
+    transition: 0.04s ease-in-out;
+}
+form{
+    display: flex;
+    justify-content: center;
+}
 section {
     margin-top: 50px;
+    display: grid;
     width: clamp(300px, 100vw, 500px);
-    height: clamp(300px, 60vh, 500px);
+    justify-content: center;
     overflow: auto;
-    display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-
 @media only screen and (min-width: 800px) {
     article {
-        transform: translate(2%, 0);
+        /* transform: translate(2%, 0); */
     }
 }
 

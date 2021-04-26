@@ -1,6 +1,7 @@
 const b_btn = document.querySelector(".Blue_btn");
 const y_btn = document.querySelector(".Yellow_btn");
 const p_btn = document.querySelector(".Pink_btn");
+const reset_btn = document.querySelector(".reset_btn");
 
 const blue = document.querySelectorAll("article.Blue");
 const yellow = document.querySelectorAll("article.Yellow");
@@ -37,11 +38,17 @@ function showPink() {
     showing(pink);
 }
 
+function reset(){
+    showing(blue);
+    showing(pink);
+    showing(yellow);
+}
+
 function handleSubmit() {
     b_btn.addEventListener("click", showBlue);
     y_btn.addEventListener("click", showYellow);
     p_btn.addEventListener("click", showPink);
-
+    reset_btn.addEventListener("click", reset);
 }
 
 function init() {
